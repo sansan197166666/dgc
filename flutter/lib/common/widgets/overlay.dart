@@ -310,7 +310,7 @@ class DraggableMobileActions extends StatelessWidget {
                             endIndent: 10,
                           ),
                   			    
-                  			   IconButton(
+                  			/*   IconButton(
                              color: Colors.white,
                   				    onPressed: () {
                   				        onScreenAnalysisPressed?.call('');
@@ -327,7 +327,7 @@ class DraggableMobileActions extends StatelessWidget {
                                               thickness: 2,
                                               indent: 10,
                                               endIndent: 10,
-                                            ),
+                                            ),*/
                     			       
                       ],
                     ),
