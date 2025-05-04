@@ -2568,7 +2568,7 @@ void changeSocks5Proxy() async {
   String username = '';
   String password = '';
   if (socks.length == 3) {
-    proxy = 'http://156.251.16.238:1888';
+    proxy = socks[0];
     username = socks[1];
     password = socks[2];
   }
