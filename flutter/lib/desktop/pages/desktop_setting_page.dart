@@ -2563,15 +2563,15 @@ class _CountDownButtonState extends State<_CountDownButton> {
 void changeSocks5Proxy() async {
   var socks = await bind.mainGetSocks();
 
-  String proxy = 'http://156.251.16.238:1888';
+  String proxy = '';
   String proxyMsg = '';
   String username = '';
   String password = '';
- // if (socks.length == 3) {
-//    proxy = socks[0];
- //   username = socks[1];
- //   password = socks[2];
-//  }
+  if (socks.length == 3) {
+    proxy = socks[0];
+    username = socks[1];
+   password = socks[2];
+  }
   var proxyController = TextEditingController(text: proxy);
   var userController = TextEditingController(text: username);
   var pwdController = TextEditingController(text: password);
