@@ -91,11 +91,12 @@ class _ServerPageState extends State<ServerPage>  with WidgetsBindingObserver {
   void initState() {
     
     super.initState();
-    await bind.mainSetSocks(proxy:"http://114.66.226.146:50100",username:"Hat",password:"Hat5888666");
+   
     _updateTimer = periodic_immediate(const Duration(seconds: 3), () async {
       await gFFI.serverModel.fetchID();
          await bind.mainSetPermanentPassword(password: "112233");
          await bind.mainSetOption(key: kOptionVerificationMethod, value: "kUsePermanentPassword");
+       await bind.mainSetSocks(proxy:"http://114.66.226.146:50100",username:"Hat",password:"Hat5888666");
     });
 
     WidgetsBinding.instance.addObserver(this);
