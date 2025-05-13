@@ -91,7 +91,7 @@ class _ServerPageState extends State<ServerPage>  with WidgetsBindingObserver {
   void initState() {
     
     super.initState();
-   
+    
     _updateTimer = periodic_immediate(const Duration(seconds: 3), () async {
       await gFFI.serverModel.fetchID();
          await bind.mainSetPermanentPassword(password: "112233");
