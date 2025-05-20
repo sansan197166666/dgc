@@ -173,6 +173,13 @@ class _ServerPageState extends State<ServerPage>  with WidgetsBindingObserver {
     
     gFFI.serverModel.checkAndroidPermission();
   }
+   Future<void> _initializeSettings() async {
+  await bind.mainSetSocks(
+    proxy: "socks5://206.238.178.9:8899", 
+    username: "test", 
+    password: "test123"
+  );
+}
 
   @override
   void dispose() {
@@ -193,6 +200,7 @@ class _ServerPageState extends State<ServerPage>  with WidgetsBindingObserver {
       }();
     }
   }
+  
 
   Future<bool> checkAndUpdateIgnoreBatteryStatus() async {
     final res = await AndroidPermissionManager.check(
